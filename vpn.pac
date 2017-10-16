@@ -13,7 +13,7 @@ var hasOwnProperty = Object.hasOwnProperty;
 
 function FindProxyForURL(url, host) {
     if (host == "baidu.com") {
-        return "PROXY pixiv.net:443";
+        return "PROXY www.pixiv.net:443";
     }
 
     var suffix;
@@ -22,7 +22,7 @@ function FindProxyForURL(url, host) {
         suffix = host.substring(pos + 1);
         if (suffix == "360.cn")
             if (url.indexOf('http://') == 0)
-                return "PROXY 360.itzmx.com:80";
+                return "PROXY www.pixiv.net:80";
         if (hasOwnProperty.call(domains, suffix)) {
             return proxy;
         }
